@@ -3903,3 +3903,439 @@ Processing by ProdutosController#create as HTML
 Completed 200 OK in 76ms (Views: 64.4ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for ::1 at 2019-09-10 17:22:36 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/patricia/.rvm/gems/ruby-2.4.7/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (3.4ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:11
+  [1m[36mProduto Load (0.5ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:34
+  Rendered produtos/index.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 683ms (Views: 654.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/produtos/new" for ::1 at 2019-09-10 17:32:19 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (94.2ms)
+Completed 200 OK in 200ms (Views: 195.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 17:32:28 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gbELa7fu/uJ1I7PeJhKPTl076LBCPNyQ6P4Vkk4/r/oD2BVijBK4fjU771e3ZXVvL+KB7+mC5zE3vBK4MMabcw==", "produto"=>{"nome"=>"ttt", "descricao"=>"fsfds", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 163ms (Views: 145.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 18:17:41 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxUlQmku9l+mdsVQOqoJnJDoHsgSuLdRZSXlIZPxWBrO86KV31ex+1MwYPQW6hXWNuKRjE0eY5XDQZreTcIag==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+Completed 500 Internal Server Error in 565ms (ActiveRecord: 5.5ms)
+
+
+  
+NameError (undefined local variable or method `produto' for #<ProdutosController:0x00007f5b75c89d58>
+Did you mean?  @produto):
+  
+app/controllers/produtos_controller.rb:17:in `create'
+Started POST "/produtos" for ::1 at 2019-09-10 18:37:16 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxUlQmku9l+mdsVQOqoJnJDoHsgSuLdRZSXlIZPxWBrO86KV31ex+1MwYPQW6hXWNuKRjE0eY5XDQZreTcIag==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+Completed 500 Internal Server Error in 601ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `produto' for #<ProdutosController:0x00007f5b75b022f0>
+Did you mean?  @produto):
+  
+app/controllers/produtos_controller.rb:17:in `create'
+Started POST "/produtos" for ::1 at 2019-09-10 18:37:53 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxUlQmku9l+mdsVQOqoJnJDoHsgSuLdRZSXlIZPxWBrO86KV31ex+1MwYPQW6hXWNuKRjE0eY5XDQZreTcIag==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+Completed 500 Internal Server Error in 574ms (ActiveRecord: 1.0ms)
+
+
+  
+NameError (undefined local variable or method `produto' for #<ProdutosController:0x00007f5b75db9390>
+Did you mean?  @produto):
+  
+app/controllers/produtos_controller.rb:17:in `create'
+Started POST "/produtos" for ::1 at 2019-09-10 18:40:54 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxUlQmku9l+mdsVQOqoJnJDoHsgSuLdRZSXlIZPxWBrO86KV31ex+1MwYPQW6hXWNuKRjE0eY5XDQZreTcIag==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+Completed 500 Internal Server Error in 586ms (ActiveRecord: 3.4ms)
+
+
+  
+NameError (undefined local variable or method `produto' for #<ProdutosController:0x00007f5b74e15268>
+Did you mean?  @produto):
+  
+app/controllers/produtos_controller.rb:17:in `create'
+Started POST "/produtos" for ::1 at 2019-09-10 18:42:23 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxUlQmku9l+mdsVQOqoJnJDoHsgSuLdRZSXlIZPxWBrO86KV31ex+1MwYPQW6hXWNuKRjE0eY5XDQZreTcIag==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+Completed 500 Internal Server Error in 550ms (ActiveRecord: 6.5ms)
+
+
+  
+NameError (undefined local variable or method `produto' for #<ProdutosController:0x00007f5b761cc5b8>
+Did you mean?  @produto):
+  
+app/controllers/produtos_controller.rb:17:in `create'
+Started POST "/produtos" for ::1 at 2019-09-10 18:43:13 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxUlQmku9l+mdsVQOqoJnJDoHsgSuLdRZSXlIZPxWBrO86KV31ex+1MwYPQW6hXWNuKRjE0eY5XDQZreTcIag==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+Completed 500 Internal Server Error in 539ms (ActiveRecord: 1.0ms)
+
+
+  
+NameError (undefined local variable or method `produto' for #<ProdutosController:0x00007f5b7569e7b8>
+Did you mean?  @produto):
+  
+app/controllers/produtos_controller.rb:17:in `create'
+Started POST "/produtos" for ::1 at 2019-09-10 18:43:50 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxUlQmku9l+mdsVQOqoJnJDoHsgSuLdRZSXlIZPxWBrO86KV31ex+1MwYPQW6hXWNuKRjE0eY5XDQZreTcIag==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 179ms (Views: 136.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 18:44:40 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8vHD7HthKfPNj+fTQ5yPF7y8BeicduD1hTNui8uGGvGrdlnzJbjM7V5a/UXTLY9mliQv1Y0Ie6aXqv90NP7X+w==", "produto"=>{"nome"=>"", "descricao"=>"", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 154ms (Views: 145.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 18:45:33 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nuVciQEv8pJyjWorASoeuAhA/QziKp7BAPkU+YUEMnbHYsaWX/YXjOFYcL2Rmx7JItjXMfNUBZISYIUGenz/fA==", "produto"=>{"nome"=>"Blue", "descricao"=>"sjadjalsdjasdkjasjaSKDAJSKkasjdkldjaskdjaSDAJKLJkldjalkdaJSDLKAJsakaj", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 163ms (Views: 153.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 18:47:20 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S2i8qM6buyZfG5x3H4fKXY02HifuoK58IN31F77FTkQS7ya3kEJeOMzOhuGPNsosp640Gv/eNS8yRGToQb2DTg==", "produto"=>{"nome"=>"dadas", "descricao"=>"sasdadasdsad", "quantidade"=>"", "preco"=>""}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/produtos_controller.rb:17
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 116ms (Views: 104.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 18:57:36 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GTCKNcXrz1oFmf8a+fmmLt/CebYOnkFTyg9soZUXf1VAtxAqmzIqRJZM5YxpSKZf9VpTix/g2gDYlv1eam+yXw==", "produto"=>{"nome"=>"dadas", "descricao"=>"sasdadasdsad", "quantidade"=>"", "preco"=>"3"}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 257ms (Views: 204.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 19:07:21 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fzql/u8pyUneBFa1qZx6FZJp7nwXX04KsKp0fFROf/smvT/hsfAsV03RTCM5LXpkuPHEQQYh1VmiM+WDqzay8Q==", "produto"=>{"nome"=>"dadas", "descricao"=>"sasdadasdsad", "quantidade"=>"-1", "preco"=>"3"}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[36mProduto Create (2.5ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "quantidade", "preco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "dadas"], ["descricao", "sasdadasdsad"], ["quantidade", -1], ["preco", 3.0], ["created_at", "2019-09-10 22:07:21.937331"], ["updated_at", "2019-09-10 22:07:21.937331"]]
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[35m (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 94ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:07:21 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (1.8ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:12
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:35
+  Rendered produtos/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 158ms (Views: 149.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/produtos/new" for ::1 at 2019-09-10 19:09:41 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 139ms (Views: 136.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 19:11:38 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MopZyhYYSjiWnJvufq6+ZIOly3q8NlG8d5bpU+2j8rKw40fDLeQMpNaEx2fv2URF8XyiJReIah2o1O55k1rGOw==", "produto"=>{"nome"=>"dsfs", "descricao"=>"dsdfs", "quantidade"=>"1", "preco"=>"2"}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[36mProduto Create (9.3ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "quantidade", "preco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "dsfs"], ["descricao", "dsdfs"], ["quantidade", 1], ["preco", 2.0], ["created_at", "2019-09-10 22:11:38.712677"], ["updated_at", "2019-09-10 22:11:38.712677"]]
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:11:38 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (5.7ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 331ms (Views: 319.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/produtos/new" for ::1 at 2019-09-10 19:12:21 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 111ms (Views: 108.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 19:12:32 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PCiHIo0vwwpv9eAZPSsEcDAJSshqHQzjmY/rRLQo7Te+QZkrttOFli/tvJCsXP5RQtAjl8GjN0JGzexuytHZvg==", "produto"=>{"nome"=>"saa", "descricao"=>"sffsf", "quantidade"=>"500", "preco"=>"500"}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[36mProduto Create (8.4ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "quantidade", "preco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "saa"], ["descricao", "sffsf"], ["quantidade", 500], ["preco", 500.0], ["created_at", "2019-09-10 22:12:32.319014"], ["updated_at", "2019-09-10 22:12:32.319014"]]
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:12:32 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 117ms (Views: 113.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/produtos/23" for ::1 at 2019-09-10 19:12:46 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BDer6KynDyX4yxnKHR+gBk7xELsdn44Us6bB9WIEEcZdsDH38n7qO2seA1yNrqB3ZGk6hgzhFUehP1AKnXzczA==", "id"=>"23"}
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[36mProduto Destroy (2.1ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:31
+Redirected to http://localhost:3000/
+Completed 302 Found in 53ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:12:46 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 117ms (Views: 115.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/patricia/.rvm/gems/ruby-2.4.7/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/patricia/.rvm/gems/ruby-2.4.7/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/patricia/.rvm/gems/ruby-2.4.7/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/patricia/.rvm/gems/ruby-2.4.7/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/patricia/.rvm/gems/ruby-2.4.7/bin/rake:23
+Started GET "/" for ::1 at 2019-09-10 19:13:23 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 155ms (Views: 145.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/produtos/new" for ::1 at 2019-09-10 19:13:27 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 110ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 19:13:38 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YazQA9LkWRmZ42zhYDV27CcnEkiwHB6rv0sm10yd41Xjxc4K6Rgfhdn7MGjxQozNVf57FxuiJQpgCSH9MmTX3A==", "produto"=>{"nome"=>"teste", "descricao"=>"teste22", "quantidade"=>"-2", "preco"=>"1"}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[36mProduto Create (7.4ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "quantidade", "preco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "teste"], ["descricao", "teste22"], ["quantidade", -2], ["preco", 1.0], ["created_at", "2019-09-10 22:13:38.525945"], ["updated_at", "2019-09-10 22:13:38.525945"]]
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[35m (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:13:38 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 114ms (Views: 111.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/produtos/new" for ::1 at 2019-09-10 19:13:49 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 127ms (Views: 125.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 19:14:02 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wppfij7xGmoT35I7YBUdQOUkgwE55yOEBFzzpkRE9itA80GDBQ1c9lPHzrLxYudhl/3qXpJZGCXbHvSMOr3Cog==", "produto"=>{"nome"=>"vczv", "descricao"=>"sdfsfd", "quantidade"=>"98", "preco"=>""}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[36mProduto Create (6.8ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "quantidade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "vczv"], ["descricao", "sdfsfd"], ["quantidade", 98], ["created_at", "2019-09-10 22:14:02.263561"], ["updated_at", "2019-09-10 22:14:02.263561"]]
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:14:02 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 110ms (Views: 107.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/produtos/24" for ::1 at 2019-09-10 19:14:18 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PkNQleuKl81TRCzx1MwN3LBRWMENbzrgzS8aijnbymdnxMqKtVNy08CRNmdEfQ2tmsly/BwRobPftot1xqMHbQ==", "id"=>"24"}
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[36mProduto Destroy (6.5ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:31
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:14:18 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (7.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.3ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 117ms (Views: 107.5ms | ActiveRecord: 7.5ms)
+
+
+Started DELETE "/produtos/30" for ::1 at 2019-09-10 19:14:25 -0300
+Processing by ProdutosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c8iMVlWhQco9VlZ+ofiqF4/rfDfEro7N/46uxOVHxZwqTxZJC3ik1K6DTOgxSapmpXNWCtXQFZ7tFz87Gj8Ilg==", "id"=>"30"}
+  [1m[36mProduto Load (0.1ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" WHERE "produtos"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[36mProduto Destroy (5.9ms)[0m  [1m[31mDELETE FROM "produtos" WHERE "produtos"."id" = ?[0m  [["id", 30]]
+  ↳ app/controllers/produtos_controller.rb:31
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:31
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:14:25 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 115ms (Views: 113.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/produtos/new" for ::1 at 2019-09-10 19:14:59 -0300
+Processing by ProdutosController#new as HTML
+  Rendering produtos/new.html.erb within layouts/application
+  Rendered produtos/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 209ms (Views: 204.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/produtos" for ::1 at 2019-09-10 19:15:19 -0300
+Processing by ProdutosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d1nUFg1khlc0ci/PbR9r2o07Hx+otimB+0Su7cFEl6z1MMofNpjAy3Rqc0b8aJH7/+J2QAMIEiAkBqnHv72jJQ==", "produto"=>{"nome"=>"Calça", "descricao"=>"para combinar", "quantidade"=>"3", "preco"=>"4"}, "commit"=>"Criar o Produto"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[36mProduto Create (6.1ms)[0m  [1m[32mINSERT INTO "produtos" ("nome", "descricao", "quantidade", "preco", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Calça"], ["descricao", "para combinar"], ["quantidade", 3], ["preco", 4.0], ["created_at", "2019-09-10 22:15:19.285776"], ["updated_at", "2019-09-10 22:15:19.285776"]]
+  ↳ app/controllers/produtos_controller.rb:21
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/produtos_controller.rb:21
+Redirected to http://localhost:3000/
+Completed 302 Found in 34ms (ActiveRecord: 15.8ms)
+
+
+Started GET "/" for ::1 at 2019-09-10 19:15:19 -0300
+Processing by ProdutosController#index as HTML
+  Rendering produtos/index.html.erb within layouts/application
+  [1m[36mProduto Load (0.4ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."nome" ASC LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/produtos/index.html.erb:15
+  [1m[36mProduto Load (0.2ms)[0m  [1m[34mSELECT  "produtos".* FROM "produtos" ORDER BY "produtos"."preco" ASC LIMIT ?[0m  [["LIMIT", 2]]
+  ↳ app/views/produtos/index.html.erb:38
+  Rendered produtos/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 218ms (Views: 215.1ms | ActiveRecord: 0.6ms)
+
+
